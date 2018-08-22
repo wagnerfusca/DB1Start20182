@@ -1,19 +1,35 @@
 package br.com.db1;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Map;
+import br.com.db1.oo.Cidade;
+import br.com.db1.oo.Endereco;
+import br.com.db1.oo.Pessoa;
+import br.com.db1.type.TipoLogradouro;
+import br.com.db1.type.Uf;
 
-public class App 
-{
-    /*public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-        
+
+public class App {
+	public static void main(String[] args) {
+		Cidade cidade = new Cidade();
+		cidade.setNome("Maringá");
+		cidade.setUf(Uf.PR);
+		
+		Endereco endereco = new Endereco();
+		endereco.setTipoLogradouro(TipoLogradouro.AVENIDA);
+		endereco.setLogradouro("Guedner");
+		endereco.setNumero("S/N");
+		endereco.setBairro("Jardim Aclimação");
+		endereco.setCep(87000000);
+		endereco.setCidade(cidade);
+		
+		Pessoa p = new Pessoa();
+		p.setNome("Marcel");
+		p.setEndereco(endereco);
+		
+
+	}
+
+	private static void fundamentosJava(){
+    /*        
         //int zero = 0;
         Integer zeroObjeto = 0;
         zeroObjeto.doubleValue();
@@ -86,6 +102,6 @@ public class App
         List<String> nomes;
         List<Dinheiro> meuSalario;
         
-        
-    }*/
+*/     
+    }
 }
