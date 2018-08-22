@@ -3,6 +3,9 @@ package br.com.db1;
 import br.com.db1.oo.Cidade;
 import br.com.db1.oo.Endereco;
 import br.com.db1.oo.Pessoa;
+import br.com.db1.oo.PessoaFisica;
+import br.com.db1.oo.PessoaJuridica;
+import br.com.db1.oo.RecFederal;
 import br.com.db1.oo.Telefone;
 import br.com.db1.type.TipoLogradouro;
 import br.com.db1.type.TipoTelefone;
@@ -40,7 +43,15 @@ public class App {
 		telefone.setTipo(TipoTelefone.REFERENCIA);
 		p.addTelefone(telefone);
 		
+		Pessoa pfHeranca = new PessoaFisica();
+		Pessoa pjHeranca = new PessoaJuridica();
 		
+		RecFederal pf = new PessoaFisica();
+		RecFederal pj = new PessoaJuridica();
+		RecFederal end = new Endereco();
+		pf.codigoDaDeclaracaoDoImpostoDeRenda();
+		pj.codigoDaDeclaracaoDoImpostoDeRenda();
+		end.codigoDaDeclaracaoDoImpostoDeRenda();
 
 	}
 
@@ -121,3 +132,4 @@ public class App {
 */     
     }
 }
+

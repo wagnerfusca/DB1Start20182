@@ -2,7 +2,7 @@ package br.com.db1.oo;
 
 import br.com.db1.type.TipoLogradouro;
 
-public class Endereco {
+public class Endereco implements RecFederal{
 
 	private TipoLogradouro tipoLogradouro;
 	private String logradouro;
@@ -57,6 +57,11 @@ public class Endereco {
 
 	public void setCidade(Cidade cidade) {
 		this.cidade = cidade;
+	}
+
+	public String codigoDaDeclaracaoDoImpostoDeRenda() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
